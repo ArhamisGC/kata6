@@ -36,7 +36,7 @@ public class BoardTest {
         Board board = new Board(board_3x3_descending_diagonal_line);
         board.chechWinner();
         String winner = board.winner();
-        assertThat(winner).isEqualTo("O");
+        assertThat(winner).isEqualTo("X");
     }
 
     @Test
@@ -44,7 +44,7 @@ public class BoardTest {
         Board board = new Board(board_3x3_ascending_diagonal_line);
         board.chechWinner();
         String winner = board.winner();
-        assertThat(winner).isEqualTo("O");
+        assertThat(winner).isEqualTo("X");
     }
 
     @Test
@@ -52,7 +52,7 @@ public class BoardTest {
         Board board = new Board(board_3x3_draw);
         board.chechWinner();
         String winner = board.winner();
-        assertThat(winner).isEqualTo("O");
+        assertThat(winner).isEqualTo("draw");
     }
     public static class Cases {
         public static String board_3x3_horizontal_line = """
